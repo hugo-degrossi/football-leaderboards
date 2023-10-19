@@ -24,6 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "https://hugo-degrossi.github.io/football-leaderboards/",
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
