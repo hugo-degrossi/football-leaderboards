@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+.list-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    width: 100%;
+    gap: 10px;
+    background-color: var(--secondary);
+    color: var(--card-color);
+    border-radius: 4px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px 0;
+}

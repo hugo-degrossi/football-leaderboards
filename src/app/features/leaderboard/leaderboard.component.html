@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div *ngIf="leaderboard$ | async as leaderboard; else loading" class="leaderboard">
+        <div class="list-item">
+            <span></span>
+            <span></span>
+            <span>Name</span>
+            <span>Played</span>
+            <span>W</span>
+            <span>D</span>
+            <span>L</span>
+            <span>+/-</span>
+            <span>Points</span>
+        </div>
+        <app-leaderboard-team-card *ngFor="let standing of leaderboard.standings[0]" [leagueId]="leagueId" [standing]="standing"></app-leaderboard-team-card>
+    </div>
+
+    <ng-template #loading>
+        Loading data...
+    </ng-template>
+</div>

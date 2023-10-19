@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+
+.light-theme {
+    --primary: #ff1e00;
+    --hover-primary: #CC1800;
+    --win: #00ce34;
+    --lost: #cc0000;
+    --draw: #e77f00;
+    --secondary: #800F00;
+    --background-color: #fff;
+    --footer: #212121;
+    --color: #212121;
+    --card-color: #f7f7f7;
+  }
+  
+.dark-theme {
+    --primary: #ff1e00;
+    --hover-primary: #CC1800;
+    --win: #008722;
+    --lost: #7f0000;
+    --draw: #9d5f03;
+    --secondary: #FF614D;
+    --background-color: #212121;
+    --card-color: #333;
+    --footer: #212121;
+    --color: #f9fafb;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Lucida Sans', Verdana, sans-serif; background-color: var(--background-color);}

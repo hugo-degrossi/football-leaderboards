@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="item-list">
+        <div 
+        id="{{country}}-select"
+        class="country-card"
+        (click)="goToLeaderboard(country)"
+        *ngFor="let country of countries"
+        >
+            {{ country.name }}
+        </div>
+    </div>
+</div>

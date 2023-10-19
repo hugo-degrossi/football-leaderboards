@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="actions">
+        <app-primary-button (action)="goBack()" [value]="'Back'"></app-primary-button>
+    </div>
+
+    <div *ngIf="fixtures$ | async as fixtures; else loading" class="fixtures">
+        <app-fixture-card *ngFor="let fixture of fixtures" [fixture]="fixture"></app-fixture-card>
+    </div>
+
+    <ng-template #loading>
+        Loading data...
+    </ng-template>
+</div>

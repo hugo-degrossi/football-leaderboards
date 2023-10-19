@@ -1,0 +1,13 @@
+<div class="list-item" [ngClass]="{
+    'win-home': fixture.goals.home > fixture.goals.away,
+    'win-away': fixture.goals.home < fixture.goals.away, 
+    'draw': fixture.goals.home === fixture.goals.away, 
+}">
+    <img class="logo field" [src]="fixture.teams.home.logo" [alt]="fixture.teams.home.id">
+    <div class="field left">{{ fixture.teams.home.name }}</div>
+    <div class="field">{{ fixture.goals.home }}</div>
+    <div class="field">-</div>
+    <div class="field">{{ fixture.goals.away }}</div>
+    <div class="field right">{{ fixture.teams.away.name }}</div>
+    <img class="logo field" [src]="fixture.teams.away.logo" [alt]="fixture.teams.away.id">
+</div>

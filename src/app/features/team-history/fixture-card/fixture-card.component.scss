@@ -1,0 +1,36 @@
+.list-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr 3fr 1fr;
+    gap: 10px;
+    background-color: var(--card-color);
+    border-radius: 4px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px 0;
+    transition: all .3s ease-in-out;
+    border-left: 5px solid var(--card-color);
+    border-right: 5px solid var(--card-color);
+
+    &.win-home {
+        border-left-color: var(--win);
+        border-right-color: var(--lost);
+
+    }
+    &.win-away {
+        border-left-color: var(--lost);
+        border-right-color: var(--win);
+    }
+    &.draw {
+        border-color: var(--draw);
+    }
+}
+
+.field {
+    color: var(--color);
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+

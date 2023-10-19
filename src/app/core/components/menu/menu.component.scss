@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.item-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 80%;
+}
+
+.country-card {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-color);
+    cursor: pointer;
+    color: var(--color);
+    border-radius: 4px;
+    border: 1px solid var(--card-color);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+    border: 1px solid var(--color);
+
+    }
+    
+}

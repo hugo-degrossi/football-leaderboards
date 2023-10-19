@@ -1,0 +1,11 @@
+<div class="list-item" (click)="goToTeamHistory()">
+    <div class="position field">{{ standing.rank }}</div>
+    <img class="logo field" [src]="standing.team.logo" [alt]="standing.team.id">
+    <div class="name field">{{ standing.team.name }}</div>
+    <div class="played field">{{ standing.all.played }}</div>
+    <div class="win field">{{ standing.all.win }}</div>
+    <div class="lose field">{{ standing.all.lose }}</div>
+    <div class="draw field">{{ standing.all.draw }}</div>
+    <div class="goal_difference field">{{ standing.goalsDiff }}</div>
+    <div class="points field">{{ standing.points }}</div>
+</div>
