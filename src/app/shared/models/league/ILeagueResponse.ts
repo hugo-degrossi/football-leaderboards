@@ -4,7 +4,7 @@ import { IParameters } from "../shared/IParameters"
 export interface ILeagueResponse {
   get: string
   parameters: IParameters
-  errors: any[]
+  errors: string[]
   results: number
   paging: IPaging
   response: Response[]

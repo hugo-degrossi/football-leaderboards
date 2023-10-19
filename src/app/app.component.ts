@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MenuComponent } from './core/components/menu/menu.component';
@@ -12,7 +12,7 @@ import { PrimaryButtonComponent } from './shared/components/primary-button/prima
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'football-leaderboards';
 
   private themeService: ThemeService = inject(ThemeService)
@@ -22,9 +22,9 @@ export class AppComponent {
   }
 
   changeTheme() {
-    this.themeService.activeTheme === 'light' 
-    ? this.themeService.set('dark') 
+    this.themeService.activeTheme === 'light'
+    ? this.themeService.set('dark')
     : this.themeService.set('light')
   }
-  
+
 }

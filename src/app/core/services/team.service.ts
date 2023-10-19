@@ -16,15 +16,15 @@ export class TeamService {
     private http = inject(HttpClient);
 
     getFixture(leagueId: string, teamId: string): Observable<IFixtureData[]> {
-        var response =  this.http.get<IFixturesResponse>(this.baseUrl + paths.FIXTURES +`?league=${leagueId}&team=${teamId}&last=10`, requestOptions);
-        return response.pipe(map(_fixture => _fixture.response));
+      const response = this.http.get<IFixturesResponse>(this.baseUrl + paths.FIXTURES + `?league=${leagueId}&team=${teamId}&last=10`, requestOptions);
+      return response.pipe(map(_fixture => _fixture.response));
     }
 
     getByIds(leagueId: string, teamId: string): Observable<IFixtureData[]> {
 
-        var key: string = leagueId + '-' + teamId;
+      const key: string = leagueId + '-' + teamId;
 
-        if(!this.cacheMap.has(key)) {
+      if(!this.cacheMap.has(key)) {
             this.cacheMap.set(
                 key,
                 this.getFixture(leagueId, teamId)

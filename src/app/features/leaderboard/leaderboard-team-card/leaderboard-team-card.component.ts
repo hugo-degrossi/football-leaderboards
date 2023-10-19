@@ -1,4 +1,4 @@
-import { Component, Inject, Input, OnInit, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { IStanding } from 'src/app/shared/models/standing/IStanding';
@@ -18,7 +18,7 @@ export class LeaderboardTeamCardComponent {
   leagueId!: string;
 
   private router: Router = inject(Router)
-  
+
   goToTeamHistory(): void {
     this.router.navigate([
       'league', this.leagueId, 'team', this.standing.team.id, 'history'

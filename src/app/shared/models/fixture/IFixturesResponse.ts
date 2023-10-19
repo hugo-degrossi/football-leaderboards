@@ -5,7 +5,7 @@ import { IFixture } from "./IFixture"
 export interface IFixturesResponse {
   get: string
   parameters: IParameters
-  errors: any[]
+  errors: string[]
   results: number
   paging: IPaging
   response: IFixtureData[]
@@ -63,21 +63,21 @@ interface Score {
 }
 
 interface Halftime {
-  home: number
-  away: number
+  home: number | null
+  away: number | null
 }
 
 interface Fulltime {
-  home: number
-  away: number
+  home: number | null
+  away: number | null
 }
 
 interface Extratime {
-  home: any
-  away: any
+  home: number | null
+  away: number | null
 }
 
 interface Penalty {
-  home: any
-  away: any
+  home: number | null
+  away: number | null
 }

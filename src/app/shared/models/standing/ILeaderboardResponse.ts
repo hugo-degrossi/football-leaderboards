@@ -5,7 +5,7 @@ import { ILeaderboard } from "./ILeaderboard"
 export interface ILeaderboardResponse {
   get: string
   parameters: IParameters
-  errors: any[]
+  errors: string[]
   results: number
   paging: IPaging
   response: ILeaderboardData[]
@@ -15,4 +15,3 @@ export interface ILeaderboardResponse {
 interface ILeaderboardData {
   league: ILeaderboard
 }
-  

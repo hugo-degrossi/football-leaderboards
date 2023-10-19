@@ -17,10 +17,10 @@ export class LeaderboardService {
     private http = inject(HttpClient);
 
     getCountryLeaderboard(leagueId: string): Observable<ILeaderboard> {
-        var response: Observable<ILeaderboard>
-        var season: Observable<ILeagueResponse>
+      let response: Observable<ILeaderboard>;
+      let season: Observable<ILeagueResponse>;
 
-        season =  this.http.get<ILeagueResponse>(this.baseUrl + paths.LEAGUES + `?current=true&id=${leagueId}`, requestOptions); 
+      season =  this.http.get<ILeagueResponse>(this.baseUrl + paths.LEAGUES + `?current=true&id=${leagueId}`, requestOptions);
 
         response = season.pipe(
             map(_league => _league.response[0].seasons[0].year),
