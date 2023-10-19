@@ -22,14 +22,10 @@ export class LeaderboardComponent implements OnInit {
   private leaderboardService = inject(LeaderboardService);
   protected leaderboard$!: Observable<ILeaderboard>;
 
-  constructor() {
+  ngOnInit(): void {
     this._activatedRouter.paramMap.subscribe(_ => {
       this.getData();
     })
-  }
-
-  ngOnInit(): void {
-    this.getData();
   }
 
 
